@@ -11,5 +11,5 @@ spec:
     spec:
       containers:
       - name: ipfs-gateway
-        image: cbluth/ipfs-gateway:latest
+        image: mackenzie/ipfs-gateway:latest
 
