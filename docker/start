@@ -3,7 +3,7 @@
 IPFS_PATH=/data/ipfs
 CADDYPATH=/data/caddy
 CADDYFILE="${CADDYPATH}/Caddyfile"
-CADDYHOST=${CADDYHOST:-":80"}
+CADDYHOST=${CADDYHOST:-":"}${PORT}
 
 mkdir -vp ${IPFS_PATH} ${CADDYPATH}
 
@@ -22,6 +22,8 @@ ${CADDYHOST} {
 }
 
 !
+
+cat ${CADDYFILE}
 
 echo "starting ipfs..." ; sleep 1
 /usr/local/bin/ipfs daemon --writable &
